@@ -77,7 +77,10 @@ namespace SEC.Nanoeye.MiniSEM
 
 			SEC.Nanoeye.NanoeyeSEM.AppDeviceEnum ade = SEC.Nanoeye.NanoeyeSEM.AppDeviceEnum.AutoDetect;
 			SEC.Nanoeye.NanoeyeSEM.AppSellerEnum ase = SEC.Nanoeye.NanoeyeSEM.AppSellerEnum.SEC;
-			SEC.Nanoeye.NanoeyeSEM.AppModeEnum ame = SEC.Nanoeye.NanoeyeSEM.AppModeEnum.Debug;
+            // Debug(AppModeEnum.Debug), Run(AppModeEnum.Run) 모드설정
+            // 모드설정에 따라서 NanoeyeSEM->Initialize->Initializer.cs 설정필요
+            // SearchController()에서 모드에 맞게 주석처리해야함.
+            SEC.Nanoeye.NanoeyeSEM.AppModeEnum ame = SEC.Nanoeye.NanoeyeSEM.AppModeEnum.Run;
 
 //#if DEBUG
 //#else

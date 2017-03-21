@@ -236,8 +236,10 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 				throw new ArgumentException();
 			}
 
-			//string[,] devices = SEC.Nanoeye.NanoColumn.Helper.EnumerateDevice();
-            string[,] devices = null;
+            // Debug 모드시 주석처리
+			string[,] devices = SEC.Nanoeye.NanoColumn.Helper.EnumerateDevice();
+            // Run 모드시 주석처리
+            //string[,] devices = null;
 			if (devices == null)
 			{
 				if (SystemInfoBinder.Default.AppMode == AppModeEnum.Debug)
