@@ -155,10 +155,7 @@ namespace SEC.GUIelement
                     float disHeight = area.Height - padding.Vertical;
 
                     Point newPadding = new Point(5, (int)(disHeight / 2));
-
-                    int count = 2;
-
-
+                    
 
                     if (microndate)
                     {
@@ -187,7 +184,7 @@ namespace SEC.GUIelement
                     {
                         hv_graph = new RectangleF(newPadding.X + 10, newPadding.Y, 20, 20);
                         hvRect = new RectangleF(hv_graph.Right + 3, hv_graph.Top, ((disWidth / 2) / 5) * 1, hv_graph.Height);
-                        count = 1;
+                        
                         newPadding = new Point((int)hvRect.Right, (int)hvRect.Top);
 
                     }
@@ -198,7 +195,7 @@ namespace SEC.GUIelement
                         magRect = new RectangleF(mag_graph.Right + 3, mag_graph.Top, ((disWidth / 2) / 5) * 1, mag_graph.Height);
 
                         newPadding = new Point((int)magRect.Right, (int)magRect.Top);
-                        count = 1;
+                        
                     }
 
                     if (micronvac)
@@ -207,7 +204,7 @@ namespace SEC.GUIelement
                         vacRect = new RectangleF(vac_graph.Right + 3, vac_graph.Top, ((disWidth / 2) / 5) * 2, vac_graph.Height);
 
                         newPadding = new Point((int)vacRect.Right, (int)vacRect.Top);
-                        count = 1;
+                        
                     }
 
                     if (microndetector)
@@ -215,14 +212,13 @@ namespace SEC.GUIelement
                         etc_graph = new RectangleF(newPadding.X + 10, newPadding.Y, 20, 20);
                         etcRect = new RectangleF(etc_graph.Right + 3, etc_graph.Top, ((disWidth / 2) / 5) * 1, etc_graph.Height);
                         newPadding = new Point((int)etcRect.Right, (int)etcRect.Top);
-                        count = 1;
+                        
                     }
 
                     if (microncompany)
                     {
                         com_graph = new RectangleF(newPadding.X + 10, newPadding.Y, 20, 20);
                         companyRect = new RectangleF(com_graph.Right + 3, com_graph.Top, ((disWidth / 2) / 5) * 2, com_graph.Height);
-                        count = 1;
                         newPadding = new Point((int)companyRect.Right, (int)companyRect.Top);
                     }
 

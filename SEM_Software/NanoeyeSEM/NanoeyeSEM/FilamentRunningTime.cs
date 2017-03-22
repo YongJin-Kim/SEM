@@ -49,7 +49,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
 
 		protected override void OnLoad(EventArgs e)
 		{
-			TextManager.Instance.DefineText(this);
+			//TextManager.Instance.DefineText(this);
 
 			base.OnLoad(e);
 		}

@@ -12,7 +12,6 @@ namespace SEC.Nanoeye.NanoeyeDevice
 			_Scanner = new NanoImage.ActiveScan();
 			_Controller = new NanoColumn.SemNormalSEM();
 			_ControllerCommunicator = new NanoView.NanoViewMasterSlave();
-			_Stage = new NanoStage.SNE5000M.Stage5000M();
 		}
 	}
 }

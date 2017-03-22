@@ -8,7 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Threading;
-using OpenCvSharp;
 using System.Diagnostics;
 
 
@@ -817,50 +816,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.FormConfig
 
         }
 
-        private IplImage imgSrc;
-        private IplImage loadImage;
-
-        private void picturePoint()
-        {
-
-            //imgSrc = new IplImage();
-
-            imgSrc = new IplImage(320, 240, BitDepth.U8, 3);
-            //imgSrc.back
-
-
-            //imgSrc = Cv.LoadImage(Properties.Resources.icon05_01_01);
-            imgSrc = Cv.CloneImage(loadImage);
-            //imgSrc.image
-            
-            //imgSrc = loadImage;
-            double x = Convert.ToDouble(CurrentX.Text);
-            double y = Convert.ToDouble(CurrentY.Text);
-
-            x = pictureBoxIpl1.Size.Width / 2 + (x * (160/ 20));
-            y = pictureBoxIpl1.Size.Height / 2 - (y * (102 / 20));
-
-
-            CvPoint centerPoint = new CvPoint((int)x, (int)y);
-
-
-
-            imgSrc.DrawMarker(centerPoint.X, centerPoint.Y, Cv.RGB(50, 235, 251), MarkerStyle.Cross, 250, LineType.AntiAlias, 2);
-            //imgSrc.DrawCircle(new CvPoint(pictureBoxIpl1.Size.Width /2, pictureBoxIpl1.Size.Height /2)  , 5, Cv.RGB(255, 0, 0));
-
-            imgSrc.DrawCircle(centerPoint, 63, Cv.RGB(50, 235, 251), 2);
-            imgSrc.DrawCircle(centerPoint, 105, Cv.RGB(50, 235, 251), 2);
-
-            imgSrc.DrawCircle(new CvPoint(pictureBoxIpl1.Size.Width / 2, pictureBoxIpl1.Size.Height / 2), 0, Cv.RGB(255, 0, 0), 8);
-
-            
-             
-             pictureBoxIpl1.ImageIpl = imgSrc;
-             //pictureBoxIpl1.SizeMode = PictureBoxSizeMode.CenterImage;
-             //pictureBoxIpl1.BackgroundImage = SEC.Nanoeye.NanoeyeSEM.Properties.Resources.Camera_CrossPoint;
-        }
-
-       
 
         private void threadCall()
         {
@@ -1398,7 +1353,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.FormConfig
 
         private void CurrentX_TextChanged(object sender, EventArgs e)
         {
-            picturePoint();
         }
 
 

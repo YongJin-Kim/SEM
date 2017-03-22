@@ -122,21 +122,16 @@ namespace SEC.Nanoeye.Support.AutoFunction
             switch (autoFocusModeType)
             {
                 case AutoFocusModeType.ValueRange:
-                    //SearchRange();
-                    automodetype = AutoFocusModeType.ValueRange;
                     SearchDynamic();
 
                     break;
                 case AutoFocusModeType.ValueNear:
-                    //SearchNear(range);
-                    automodetype = AutoFocusModeType.ValueNear;
                     SearchNear(range);
                     break;
                 default:
                     throw new ArgumentException("Undefined AutoFocus Mode. " + autoFocusModeType.ToString(), "autoFocusModeType");
             }
 
-            //SearchDynamic();
         }
 
         void autoVideo_ProgressChanged(object sender, EventArgs e)
@@ -154,8 +149,6 @@ namespace SEC.Nanoeye.Support.AutoFunction
         int[] freqFilter;
         short[][] frameBuffer;
         double freqSum = 0.0;
-
-        private AutoFocusModeType automodetype;
 
         int dynamicIndex = 0;
         private int[] dynamicDivider = { 16, 6 };

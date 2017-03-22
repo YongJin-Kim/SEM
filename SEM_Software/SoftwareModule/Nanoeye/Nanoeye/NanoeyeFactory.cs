@@ -73,11 +73,6 @@ namespace SEC.Nanoeye
 		{
 			get { return _ControllerCommunicator; }
 		}
-
-		protected SEC.Nanoeye.NanoStage.IStage _Stage = null;
-		public virtual SEC.Nanoeye.NanoStage.IStage Stage
-		{
-			get { return _Stage; }
-		}
+        
 	}
 }

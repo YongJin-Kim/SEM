@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using SEC.Nanoeye.NanoImage.DataAcquation;
-using SEC.Nanoeye.NanoImage.DataAcquation.IODA;
 using SEC.Nanoeye.NanoImage.DataAcquation.NIDaq;
 using SEC.Nanoeye.NanoImage.ScanItem;
 using SEC.Nanoeye.NanoImage.DataAcquation.CSTDaq;
@@ -308,9 +307,6 @@ namespace SEC.Nanoeye.NanoImage
                     dataAcqurator = new NIDaq6353(dev.Substring(7));
                     break;
 				}
-				break;
-			case "IOD":
-				dataAcqurator = new IODAUsb(dev.Substring(7));
 				break;
 
             case "CST":

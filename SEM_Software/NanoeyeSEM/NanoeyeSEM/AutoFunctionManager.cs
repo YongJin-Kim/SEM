@@ -43,7 +43,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
 		{
 			InitializeComponent();
 
-			TextManager.Instance.DefineText(this);
+			//TextManager.Instance.DefineText(this);
 		}
 
         internal void RunAutoFunction(AutoFunctionType aft, SEC.Nanoeye.Support.Controls.PaintPanel ppSingle, SEC.Nanoeye.NanoColumn.Lens.IWDSplineObjBase iwdsob, string detectorStr)

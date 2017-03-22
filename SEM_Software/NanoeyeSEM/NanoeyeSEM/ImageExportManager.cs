@@ -122,7 +122,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
 			{
 				Trace.WriteLine("Fail to send image. - " + ex.Message, "Warring");
 				Debug.WriteLine(ex.StackTrace, ex.Message);
-				MessageBox.Show(TextManager.Instance.GetString("Message_ExportManagerFail") + "\r\n" + ex.Message, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				//MessageBox.Show(TextManager.Instance.GetString("Message_ExportManagerFail") + "\r\n" + ex.Message, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return;
 			}
 		}
@@ -175,7 +175,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
 
 				Trace.WriteLine("Fail to send image.", "Warring");
 				Debug.WriteLine(ex.StackTrace, ex.Message);
-				MessageBox.Show(TextManager.Instance.GetString("Message_ExportManagerFail").Text, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				//MessageBox.Show(TextManager.Instance.GetString("Message_ExportManagerFail").Text, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 				return;
 			}
@@ -309,34 +309,9 @@ namespace SEC.Nanoeye.NanoeyeSEM
             {
                 di = new System.IO.DirectoryInfo(Application.StartupPath);  
             }
-
-
             
-            bool fileCountEnable = false;
             string strName = AutoName + "_" + fileCount.ToString(); 
-            //while (true)
-            //{
-            //    fileCountEnable = false;
-            //    fileCount = 0;
-            //    foreach (var fi in di.GetFiles())
-            //    {
 
-
-            //        if (strName + ".jpg" == fi.Name)
-            //        {
-            //            fileCount++;
-            //            strName = AutoName + "_" + fileCount.ToString();
-            //            fileCountEnable = true;
-            //        }
-        
-                    
-            //    }
-
-            //    if (fileCountEnable == false)
-            //    {
-            //        break;
-            //    }
-            //}
             AutoName = strName;
             
 

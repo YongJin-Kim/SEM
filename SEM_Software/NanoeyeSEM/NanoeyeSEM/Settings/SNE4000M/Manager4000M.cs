@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using SECtype = SEC.GenericSupport.DataType;
-using SECstage = SEC.Nanoeye.NanoStage;
 using SEC.Nanoeye;
 
 namespace SEC.Nanoeye.NanoeyeSEM.Settings.SNE4000M

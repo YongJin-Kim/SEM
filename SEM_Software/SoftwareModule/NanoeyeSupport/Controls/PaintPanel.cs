@@ -106,15 +106,10 @@ namespace SEC.Nanoeye.Support.Controls
             imageOriginal = new Bitmap(1, 1);
             imageOriSize = new Size(1, 1);
 
-
-            //int ImageSizeWidth = this.imageSize.Width;
-            //int ImageSizeHeight = this.Height * 2;
-
+            
             imagePicture = new Bitmap(1280, 960, PixelFormat.Format32bppArgb);
             imageSize = new Size(1280, 960);
-
-            //imagePicture = new Bitmap(ImageSizeWidth, ImageSizeHeight, PixelFormat.Format32bppArgb);
-            //imageSize = new Size(ImageSizeWidth, ImageSizeHeight);
+            
         }
 
         public void FormImageSizeChange(int width, int height)
@@ -123,11 +118,7 @@ namespace SEC.Nanoeye.Support.Controls
             imageSize = new Size(width * 2, height * 2);
 
             ChangeImageProcess(1);
-
-            //FormImageSizeChange(imageSize);
-
-
-            //this.Invalidate();
+            
         }
 
         public void FormClientSizeChange(Size size)
@@ -135,8 +126,7 @@ namespace SEC.Nanoeye.Support.Controls
             ClientSize = new Size(size.Width, size.Height);
             imagePicture = new Bitmap(1280, 960, PixelFormat.Format32bppArgb);
             imageSize = new Size(1280, 960);
-            //imagePicture = new Bitmap(size.Width, size.Height, PixelFormat.Format32bppArgb);
-            //imageSize = new Size(size.Width, size.Height);
+
 
             ChangeImageProcess(1);
         }
@@ -161,11 +151,9 @@ namespace SEC.Nanoeye.Support.Controls
 
 
             imageSize = new Size(1280, 960);
-            //imageSize = new Size(ImageSizeWidth, ImageSizeHeight);
-            //imageSize = new Size(320, 320);
+
 
             if ((imageData != IntPtr.Zero) && (_SiEvent == null))
-            //if ((imageData2 != IntPtr.Zero) && (_SiEvent == null))
             {
                 GenericSupport.GHeapManager.Free(ref imageData, this.ToString());
 
@@ -245,7 +233,7 @@ namespace SEC.Nanoeye.Support.Controls
         private unsafe bool EventRelease(bool copy)
         {
             _MTools.Visiable = true;
-            //this.Invalidate();
+
             if (_SiEvent == null) { return false; }
 
             _SiEvent.FrameUpdated -= new SEC.Nanoeye.NanoImage.ScanDataUpdateDelegate(SiEvent_FrameUpdated);

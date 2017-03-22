@@ -134,12 +134,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="OpenCvSharp">
-      <HintPath>..\..\..\..\..\Utill\OpenCvSharp-2.4.5-x86-20130512\OpenCvSharp-2.4.5-x86-20130512\OpenCvSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenCvSharp.UserInterface">
-      <HintPath>..\..\..\..\..\Utill\OpenCvSharp-2.4.5-x86-20130512\OpenCvSharp-2.4.5-x86-20130512\OpenCvSharp.UserInterface.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
@@ -155,13 +149,6 @@
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Windows7.Multitouch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\유틸\TouchDataVisualization\TouchDataVisualization\bin\Debug\Windows7.Multitouch.dll</HintPath>
-    </Reference>
-    <Reference Include="Windows7.Multitouch.WinForms">
-      <HintPath>..\..\..\..\..\..\유틸\TouchDataVisualization\TouchDataVisualization\bin\Debug\Windows7.Multitouch.WinForms.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutBox1.cs">
@@ -243,12 +230,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FormMain.ko-KR.resx</DependentUpon>
     </Compile>
-    <Compile Include="FormMainTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMainTest.Designer.cs">
-      <DependentUpon>FormMainTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Initialize\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,35 +252,14 @@
     <Compile Include="PasswordChange.designer.cs">
       <DependentUpon>PasswordChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings\AIOsem\Manager4500P.cs" />
-    <Compile Include="Settings\AIOsem\SettingData.cs">
-      <DependentUpon>SettingData.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Settings\AIOsem\SettingData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SettingData.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Settings\SNE4000M\SettingData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SettingData.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StatusServer.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="StatusServer.Designer.cs">
-      <DependentUpon>StatusServer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Template\ITemplate.cs" />
     <Compile Include="Template\MiniSEM.cs" />
     <Compile Include="Template\SNE4000M.cs" />
-    <Compile Include="FastScanAreaSelect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FastScanAreaSelect.Designer.cs">
-      <DependentUpon>FastScanAreaSelect.cs</DependentUpon>
-    </Compile>
     <Compile Include="FilamentRunningTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,18 +311,6 @@
     <Compile Include="Initialize\DeviceSelector.designer.cs">
       <DependentUpon>DeviceSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="BeamShiftCrossPoint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BeamShiftCrossPoint.designer.cs">
-      <DependentUpon>BeamShiftCrossPoint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrontPanelList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrontPanelList.Designer.cs">
-      <DependentUpon>FrontPanelList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Initialize\Initializer.cs" />
     <Compile Include="FormConfig\InfoZone.cs">
       <SubType>Form</SubType>
@@ -378,10 +326,6 @@
     <EmbeddedResource Include="AutoFunctionManager.resx">
       <DependentUpon>AutoFunctionManager.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FastScanAreaSelect.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FastScanAreaSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FilamentRunningTime.resx">
       <DependentUpon>FilamentRunningTime.cs</DependentUpon>
@@ -573,10 +517,6 @@
     <EmbeddedResource Include="FormMain.zh.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMainTest.resx">
-      <DependentUpon>FormMainTest.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormProgressNotify\FormProgressNotify.resx">
       <DependentUpon>FormProgressNotify.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -584,14 +524,6 @@
     <EmbeddedResource Include="Initialize\DeviceSelector.resx">
       <DependentUpon>DeviceSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BeamShiftCrossPoint.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>BeamShiftCrossPoint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrontPanelList.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrontPanelList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfig\InfoZone.resx">
       <DependentUpon>InfoZone.cs</DependentUpon>
@@ -627,10 +559,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="StatusServerViewer.resx">
-      <DependentUpon>StatusServerViewer.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Wizard\WizardViewer.resx">
       <DependentUpon>WizardViewer.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -645,7 +573,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ScreenSaverControl.cs" />
     <Compile Include="Settings\Enumerations.cs" />
     <Compile Include="Settings\ISettingManager.cs" />
     <Compile Include="Settings\MiniSEM\MicroscopeProfile.cs" />
@@ -667,14 +594,7 @@
     <Compile Include="Settings\SNE4000M\Manager4000M.cs" />
     <Compile Include="SystemInfoBinder.cs" />
     <Compile Include="Template\SNE4500P.cs" />
-    <Compile Include="TextManager.cs" />
     <Compile Include="UIsetBinder.cs" />
-    <Compile Include="StatusServerViewer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StatusServerViewer.Designer.cs">
-      <DependentUpon>StatusServerViewer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Wizard\WizardViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -684,9 +604,6 @@
     <Compile Include="Wizard\WizardNodeData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="camera.ico" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram5.cd" />
     <None Include="Resources\PushToolButtonSmall1.png" />
     <None Include="Resources\MagnificationLeftSmall.png" />
     <None Include="Resources\MagnificationRightSmall.png" />
@@ -1103,9 +1020,6 @@
     <None Include="Resources\white logo.png" />
     <None Include="Resources\icon05-01-01.png" />
     <Content Include="senseicon.ico" />
-    <Content Include="TextData.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Wizard\ApertualAlign.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1136,7 +1050,6 @@
     <Content Include="Wizard\wizardGunAlign.JPG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\UIsetBinder.datasource" />
     <None Include="Resources\generic_picture.png" />
     <None Include="Resources\Printer.png" />
@@ -1165,17 +1078,6 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Settings\AIOsem\SettingData.xsc">
-      <DependentUpon>SettingData.xsd</DependentUpon>
-    </None>
-    <None Include="Settings\AIOsem\SettingData.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SettingData.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Settings\AIOsem\SettingData.xss">
-      <DependentUpon>SettingData.xsd</DependentUpon>
     </None>
     <None Include="Settings\MiniSEM\MicroscopeProfile.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -1236,9 +1138,6 @@
     <None Include="Settings\SNE4000M\SettingData.xss">
       <DependentUpon>SettingData.xsd</DependentUpon>
     </None>
-    <Content Include="TextSchema.xsd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

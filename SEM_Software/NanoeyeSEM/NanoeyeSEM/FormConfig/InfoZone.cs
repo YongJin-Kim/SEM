@@ -43,7 +43,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
 
 		protected override void OnLoad(EventArgs e)
 		{
-			TextManager.Instance.DefineText(this);
+			//TextManager.Instance.DefineText(this);
 
 			base.OnLoad(e);
 		}
@@ -165,16 +165,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
         
 		private void CloseBut_Click(object sender, EventArgs e)
 		{
-           
-            //mainform.Owner = this.Owner;
-            //mainform.InfoZonechecked(sender, e);
-
-
-            miniSEM.InfoFormClose();
-
             this.Close();
-
-            
 		}
 
         private void InfoEnableCheckedChange(object sender, EventArgs e)
@@ -215,18 +206,7 @@ namespace SEC.Nanoeye.NanoeyeSEM
                     break;
             }
         }
-
-        private void Company_TextChanged(object sender, EventArgs e)
-        {
-            //Properties.Settings.Default.DescriptorText = 
-            
-        }
-
-       
-
-
-       
-
+  
         
 	}
 }

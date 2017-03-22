@@ -34,7 +34,6 @@
             System.Windows.Forms.Label label24;
             System.Windows.Forms.Label label30;
             System.Windows.Forms.Label label29;
-            this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
             this.label1 = new System.Windows.Forms.Label();
             this.CurrentX = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,7 +68,6 @@
             label24 = new System.Windows.Forms.Label();
             label30 = new System.Windows.Forms.Label();
             label29 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
             this.SuspendLayout();
             // 
             // label23
@@ -107,18 +105,6 @@
             label29.BackColor = System.Drawing.Color.Transparent;
             label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(149)))), ((int)(((byte)(149)))));
             label29.Name = "label29";
-            // 
-            // pictureBoxIpl1
-            // 
-            this.pictureBoxIpl1.AccessibleDescription = null;
-            this.pictureBoxIpl1.AccessibleName = null;
-            resources.ApplyResources(this.pictureBoxIpl1, "pictureBoxIpl1");
-            this.pictureBoxIpl1.BackColor = System.Drawing.Color.Black;
-            this.pictureBoxIpl1.BackgroundImage = global::SEC.Nanoeye.NanoeyeSEM.Properties.Resources.CameraBackground;
-            this.pictureBoxIpl1.Font = null;
-            this.pictureBoxIpl1.ImageLocation = null;
-            this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.pictureBoxIpl1.TabStop = false;
             // 
             // label1
             // 
@@ -575,7 +561,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBoxIpl1);
             this.DoubleBuffered = true;
             this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -584,7 +569,6 @@
             this.ShowIcon = false;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MotorStage_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MotorStage_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,7 +576,6 @@
 
         #endregion
 
-        private OpenCvSharp.UserInterface.PictureBoxIpl pictureBoxIpl1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox CurrentX;
         private System.Windows.Forms.Label label2;

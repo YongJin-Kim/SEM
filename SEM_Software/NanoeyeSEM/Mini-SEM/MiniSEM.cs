@@ -56,13 +56,10 @@ namespace SEC.Nanoeye.MiniSEM
 		SEC.Nanoeye.NanoeyeSEM.MiniSEM fr;
 		public void OnStartup(Microsoft.VisualBasic.ApplicationServices.StartupEventArgs e)
 		{
-           
-
 			//base.OnStartup(e);
 			SEC.Nanoeye.NanoeyeSEM.Initialize.Splash.Default = new SEC.Nanoeye.NanoeyeSEM.Initialize.Splash();
 			SEC.Nanoeye.NanoeyeSEM.Initialize.Splash.Default.Show();
-
-
+            
 
 			string logPath = Application.CommonAppDataPath + @".\Log";
 
@@ -80,12 +77,8 @@ namespace SEC.Nanoeye.MiniSEM
             // Debug(AppModeEnum.Debug), Run(AppModeEnum.Run) 모드설정
             // 모드설정에 따라서 NanoeyeSEM->Initialize->Initializer.cs 설정필요
             // SearchController()에서 모드에 맞게 주석처리해야함.
-            SEC.Nanoeye.NanoeyeSEM.AppModeEnum ame = SEC.Nanoeye.NanoeyeSEM.AppModeEnum.Run;
+            SEC.Nanoeye.NanoeyeSEM.AppModeEnum ame = SEC.Nanoeye.NanoeyeSEM.AppModeEnum.Debug;
 
-//#if DEBUG
-//#else
-//            SEC.Nanoeye.NanoeyeSEM.AppModeEnum ame = SEC.Nanoeye.NanoeyeSEM.AppModeEnum.Run;
-//#endif
 
             SEC.Nanoeye.NanoeyeSEM.Initialize.Splash.Default.UpdateInfo(ade, ase, ame);
 

@@ -399,9 +399,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\popup_sample_bg.png" />
   </ItemGroup>
   <ItemGroup>

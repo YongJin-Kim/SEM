@@ -149,14 +149,6 @@
     <Compile Include="NanoImage\DataAcquation\CST\FTDI.cs" />
     <Compile Include="NanoImage\DataAcquation\CST\Utility.cs" />
     <Compile Include="NanoImage\DataAcquation\iDAQ.cs" />
-    <Compile Include="NanoImage\DataAcquation\IODA\Information.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NanoImage\DataAcquation\IODA\Information.Designer.cs">
-      <DependentUpon>Information.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NanoImage\DataAcquation\IODA\IODAUsb.cs" />
-    <Compile Include="NanoImage\DataAcquation\IODA\IODAUSB_API.cs" />
     <Compile Include="NanoImage\DataAcquation\NIDaq\Information.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,21 +170,6 @@
     <Compile Include="NanoImage\ScanItem\SI_SC_LA_Blur.cs" />
     <Compile Include="NanoColumn\MiniSEM_Devices.cs" />
     <Compile Include="NanoColumn\EnumIControlTableSetStyle.cs" />
-    <Compile Include="NanoStage\DCValues\AxisDC.cs" />
-    <Compile Include="NanoStage\HomeSearch.cs" />
-    <Compile Include="NanoStage\MMCValues\MMCAxis.cs" />
-    <Compile Include="NanoStage\Enumeration.cs" />
-    <Compile Include="NanoStage\IAxis.cs" />
-    <Compile Include="NanoStage\IAxPosition.cs" />
-    <Compile Include="NanoStage\IStage.cs" />
-    <Compile Include="NanoStage\MMCValues\MMCStage.cs" />
-    <Compile Include="NanoStage\SNE5000M\DebugHelper.cs" />
-    <Compile Include="NanoStage\SNE5000M\IStage5000M.cs" />
-    <Compile Include="NanoStage\MMCValues\MMCPosition.cs" />
-    <Compile Include="NanoStage\MMCValues\MMCAPICollection.cs" />
-    <Compile Include="NanoStage\SNE5000M\Stage5000M.cs" />
-    <Compile Include="NanoStage\DCValues\StageDC.cs" />
-    <Compile Include="NanoStage\DCValues\StageDevices.cs" />
     <Compile Include="NanoView\EventArgsClasses.cs" />
     <Compile Include="NanoView\IMasterObjet.cs" />
     <Compile Include="NanoView\INanoView.cs" />
@@ -207,7 +184,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="CTS-IODA-LIBRARY.pdf" />
     <None Include="IODAUSB.h" />
     <Content Include="IODAUSB.dll">
@@ -216,10 +192,6 @@
     <Content Include="MMCWHP10.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="NanoImage\DataAcquation\IODA\Information.resx">
-      <DependentUpon>Information.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="NanoImage\DataAcquation\NIDaq\Information.resx">
       <DependentUpon>Information.cs</DependentUpon>
       <SubType>Designer</SubType>

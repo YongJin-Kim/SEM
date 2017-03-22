@@ -245,7 +245,6 @@
             this.CompanyText.ForeColor = System.Drawing.Color.Black;
             this.CompanyText.Name = "CompanyText";
             this.CompanyText.Text = global::SEC.Nanoeye.NanoeyeSEM.Properties.Settings.Default.CompanyText;
-            this.CompanyText.TextChanged += new System.EventHandler(this.Company_TextChanged);
             // 
             // label15
             // 

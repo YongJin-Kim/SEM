@@ -103,9 +103,7 @@ namespace SEC.Nanoeye.NanoImage.DataAcquation.CSTDaq
         private FTDI CSTDaqDevice;
 
         private string DataString = null;
-
-        int bufferCount = 0;
-
+        
         bool isSerialStart = false;
         int isChangeFlag = 1;
         int isStopFlag = 1;
@@ -235,8 +233,6 @@ namespace SEC.Nanoeye.NanoImage.DataAcquation.CSTDaq
 
             _setR = set[0];
             
-            bufferCount = 0;
-
             if (DataString != null)
             {
                 DataString = null;
@@ -1025,9 +1021,7 @@ namespace SEC.Nanoeye.NanoImage.DataAcquation.CSTDaq
             daqQueue.Set();
 
             UInt32 numBytesWritten = 0;
-
-            bufferCount = 0;
-
+            
             int xpoint = (int)_setR.FrameWidth / 2;
             int ypoint = (int)_setR.FrameHeight / 2;
 

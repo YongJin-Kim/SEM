@@ -32,7 +32,7 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 
 			init.form = miniSEM;
 
-			TextManager.Instance.LoadStringData(@".\textdata.xml");
+			//TextManager.Instance.LoadStringData(@".\textdata.xml");
 
 			init.SearchController();
 
@@ -122,7 +122,7 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 			switch (devList.Length)
 			{
 			case 0:
-				throw new NotSupportedException(TextManager.Instance.GetString("Message_DAQEmpty").Text);
+				//throw new NotSupportedException(TextManager.Instance.GetString("Message_DAQEmpty").Text);
 			case 1:
 				scanner.Initialize(devList[0]);
 				break;
@@ -140,7 +140,7 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 				else
 				{
 					Trace.WriteLine( "Scanning device was not selected.", "Initializer");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_DAQNotSelect").Text);
+					//throw new NotSupportedException(TextManager.Instance.GetString("Message_DAQNotSelect").Text);
 				}
 				break;
 			}
@@ -205,10 +205,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
             case AppDeviceEnum.AutoDetect:
 				SystemInfoBinder.Default.SetManager = new Settings.SNE4000M.Manager4000M();
 				break;
-            case AppDeviceEnum.SNE4500P:
-                SystemInfoBinder.Default.SetManager = new Settings.AIOsem.Manager4500P();
-                break;
-
 			
 			default:
 				throw new NotSupportedException("Device is not defined.");
@@ -276,7 +272,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 				}
 				else
 				{
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_ControllerEmpty").Text);
 				}
 			}
 			else
@@ -286,7 +281,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 				switch (devices.GetLength(0))
 				{
 				case 0:
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_ControllerEmpty").Text);
 				case 1:
                     Trace.WriteLine("-----------------------------------------------------------------");    
 
@@ -302,7 +296,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					else
 					{
 						Trace.WriteLine("There are more then two SEM controller. But user didn't select. Program will be shutdown.", "Initializer");
-						throw new NotSupportedException(TextManager.Instance.GetString("Message_ControllerNotSelect").Text);
 					}
 					break;
 				}
@@ -319,7 +312,6 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
             
 
 			Splash.Default.TxtModel = SystemInfoBinder.GetEquipmentName();
-			//formSplash.companey = SystemInfoBinder.GetCompaneyName();
 
 
 			switch (SystemInfoBinder.Default.AppDevice)
@@ -355,13 +347,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE1500M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -374,13 +364,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.Hirox))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE1500M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.Hirox;
@@ -393,13 +381,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -411,13 +397,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.Hirox))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.Hirox;
@@ -429,13 +413,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.Hirox))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.Hirox;
@@ -447,13 +429,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.Hirox))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.Hirox;
@@ -465,13 +445,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.Hirox))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.Hirox;
@@ -484,13 +462,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.Evex))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.Evex;
@@ -503,13 +479,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.Nikkiso))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.Nikkiso;
@@ -522,13 +496,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 					(SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
 				}
 				if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
 					(SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE4000M))
 				{
 					Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-					throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
 				}
 
 				SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -541,13 +513,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE4500M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -559,13 +529,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE4500M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -578,13 +546,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3000MB))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -597,13 +563,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3200M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -615,13 +579,11 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
                     (SystemInfoBinder.Default.AppSeller != AppSellerEnum.SEC))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidSeller").Text);
                 }
                 if ((SystemInfoBinder.Default.AppDevice != AppDeviceEnum.AutoDetect) &&
                     (SystemInfoBinder.Default.AppDevice != AppDeviceEnum.SNE3200M))
                 {
                     Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppDevice.ToString(), "Error");
-                    throw new NotSupportedException(TextManager.Instance.GetString("Message_InvalidDevice").Text);
                 }
 
                 SystemInfoBinder.Default.AppSeller = AppSellerEnum.SEC;
@@ -634,7 +596,8 @@ namespace SEC.Nanoeye.NanoeyeSEM.Initialize
 			case "Unknown":
 			default:
 				Trace.WriteLine(equ + " vs " + SystemInfoBinder.Default.AppSeller.ToString(), "Error");
-				throw new NotSupportedException(TextManager.Instance.GetString("Message_Unsupported").Text);
+                    throw new NotSupportedException();
+
 			}
 
 			SystemInfoBinder.Default.Nanoeye.ControllerCommunicator.PortName = port;

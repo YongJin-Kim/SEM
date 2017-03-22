@@ -705,7 +705,6 @@
             this.bitmapCheckBox8 = new SEC.Nanoeye.Controls.BitmapCheckBox();
             this.bitmapCheckBox9 = new SEC.Nanoeye.Controls.BitmapCheckBox();
             this.bitmapCheckBox10 = new SEC.Nanoeye.Controls.BitmapCheckBox();
-            this.pictureBoxIpl1 = new OpenCvSharp.UserInterface.PictureBoxIpl();
             this.imageTrackBarWithSingle1 = new SEC.Nanoeye.Support.Controls.ImageTrackBarWithSingle();
             this.imageTrackBarWithSingle2 = new SEC.Nanoeye.Support.Controls.ImageTrackBarWithSingle();
             this.bitmapCheckBox21 = new SEC.Nanoeye.Controls.BitmapCheckBox();
@@ -985,7 +984,7 @@
             this.ultraTabControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabControl4)).BeginInit();
             this.ultraTabControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).BeginInit();
+            
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraFlowLayoutManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBtn)).BeginInit();
@@ -7871,14 +7870,6 @@
             this.bitmapCheckBox10.Tag = "Video";
             this.bitmapCheckBox10.UseCompatibleTextRendering = true;
             // 
-            // pictureBoxIpl1
-            // 
-            this.pictureBoxIpl1.BackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.pictureBoxIpl1, "pictureBoxIpl1");
-            this.pictureBoxIpl1.Name = "pictureBoxIpl1";
-            this.helpProvider1.SetShowHelp(this.pictureBoxIpl1, ((bool)(resources.GetObject("pictureBoxIpl1.ShowHelp"))));
-            this.pictureBoxIpl1.TabStop = false;
-            // 
             // imageTrackBarWithSingle1
             // 
             this.imageTrackBarWithSingle1.BackColor = System.Drawing.Color.Transparent;
@@ -8696,7 +8687,6 @@
             this.panel2.Controls.Add(this.MotorRtxt);
             this.panel2.Controls.Add(this.MotorYtxt);
             this.panel2.Controls.Add(this.MotorXtxt);
-            this.panel2.Controls.Add(this.pictureBoxIpl1);
             this.panel2.Controls.Add(this.MotorHomeBtn);
             this.panel2.Controls.Add(this.NavigationCaptureBtn);
             this.panel2.Controls.Add(this.MotorStopBtn);
@@ -9344,7 +9334,6 @@
             this.ultraTabControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabControl4)).EndInit();
             this.ultraTabControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIpl1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraFlowLayoutManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBtn)).EndInit();
@@ -9558,7 +9547,6 @@
         private SEC.Nanoeye.Controls.BitmapCheckBox bitmapCheckBox20;
         private System.Windows.Forms.Label stigXLab;
         private System.Windows.Forms.Label stigYLab;
-        private OpenCvSharp.UserInterface.PictureBoxIpl pictureBoxIpl1;
         private SEC.Nanoeye.Controls.BitmapCheckBox MagBtn;
         private SEC.Nanoeye.Controls.BitmapRadioButton frMainScanPsBb2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

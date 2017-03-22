@@ -27,7 +27,7 @@ namespace SEC.Nanoeye.NanoeyeSEM.FormConfig
 
 		protected override void OnLoad(EventArgs e)
 		{
-			TextManager.Instance.DefineText(this);
+			//TextManager.Instance.DefineText(this);
 			
 			base.OnLoad(e);
 		}
